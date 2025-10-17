@@ -6,16 +6,17 @@
 }
 
 body {
-  background-color: #0e0e0e;
   color: #fff;
+  line-height: 1.6;
 }
+
 
 header {
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 100;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(8px);
 }
 
@@ -23,7 +24,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 60px;
+  padding: 15px 50px;
 }
 
 .logo {
@@ -37,13 +38,12 @@ nav {
 
 .logo i {
   color: #ff6600;
-  font-size: 1.4rem;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
-  gap: 30px;
+  list-style: none;
+  gap: 25px;
 }
 
 nav ul li a {
@@ -57,227 +57,224 @@ nav ul li a:hover {
   color: #ff4500;
 }
 
+
 .hero {
   height: 100vh;
   background: url('https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=1600&q=60') no-repeat center/cover;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: relative;
-  padding-top: 80px;
+  padding-top: 70px;
 }
 
 .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,0.6);
 }
 
 .hero-content {
   position: relative;
   text-align: center;
+  max-width: 650px;
   color: white;
   z-index: 2;
-  max-width: 600px;
-  padding: 80px 20px;
-  animation: fadeIn 2s ease;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
 }
 
 .hero-content h1 {
   font-size: 3rem;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: #ff4500;
 }
 
 .hero-content p {
   font-size: 1.1rem;
-  line-height: 1.5;
-}
-
-.hero-content .btn {
-  margin-top: 25px;
-  display: inline-block;
-  padding: 10px 25px;
-  background-color: #ff4500;
-  color: #fff;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.hero-content .btn:hover {
-  background-color: #ff6600;
-}
-
-.about, .plans, .bmi, .contact {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.about {
-  background-color: #141414;
-}
-
-.about h2, .plans h2, .bmi h2, .contact h2 {
-  font-size: 2rem;
-  color: #ff4500;
   margin-bottom: 20px;
 }
 
-.about p, .contact p {
+.hero-content .btn {
+  background: #ff4500;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-content .btn:hover {
+  background: #ff6600;
+}
+
+
+.about { background: #1a1a1a; padding: 80px 20px; text-align: center; }
+.plans { background: #222; padding: 80px 20px; text-align: center; }
+.bmi { background: #1a1a1a; padding: 80px 20px; text-align: center; }
+.contact { background: #222; padding: 80px 20px; text-align: center; }
+footer { background: #111; padding: 35px 20px; text-align: center; color: #aaa; }
+
+h2 {
+  font-size: 2rem;
+  color: #ff4500;
+  margin-bottom: 25px;
+}
+
+p {
   max-width: 700px;
   margin: 0 auto 20px;
-  font-size: 1.05rem;
-  line-height: 1.6;
   color: #ddd;
 }
 
-.plans {
-  background-color: #1b1b1b;
-}
 
 .plan-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 25px;
 }
 
 .plan-card {
-  background-color: #222;
+  background: #333;
+  padding: 25px;
   border-radius: 12px;
-  padding: 30px;
   width: 280px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  border: 2px solid transparent;
-}
-
-.plan-card:hover {
-  transform: translateY(-10px);
-  border-color: #ff4500;
-  box-shadow: 0 0 20px rgba(255, 69, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 400px;
+  transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
 }
 
 .plan-card h3 {
-  font-size: 1.4rem;
   color: #ff6600;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
 }
 
 .plan-card .price {
-  font-size: 1.3rem;
-  margin-bottom: 15px;
   color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
 }
 
 .plan-card ul {
   list-style: none;
-  text-align: left;
-  color: #ccc;
-  margin-bottom: 20px;
+  padding: 0;
+  width: 100%;
 }
 
 .plan-card ul li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-start;
   margin: 10px 0;
+  font-size: 0.95rem;
+  font-weight: 500;
 }
 
-.plan-card ul li i {
+.plan-card ul li i.fa-check {
   color: #ff4500;
-  margin-right: 8px;
+}
+
+.plan-card ul li i.fa-xmark {
+  color: #888;
 }
 
 .plan-card button {
-  background-color: #ff4500;
-  border: none;
+  margin-top: 10px;
   padding: 10px 20px;
+  background: #ff4500;
+  border: none;
   border-radius: 6px;
-  color: white;
+  color: #fff;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: 0.3s;
 }
 
 .plan-card button:hover {
-  background-color: #ff6600;
+  background: #ff6600;
 }
 
-.plan-card.popular {
-  border: 2px solid #ff4500;
+.plan-container:hover .plan-card {
+  opacity: 0.5;
+}
+
+.plan-container .plan-card:hover {
+  opacity: 1;
   transform: scale(1.05);
+  box-shadow: 0 0 25px 5px rgba(255, 102, 0, 0.6);
 }
 
-
-.bmi {
-  background-color: #141414;
-}
 
 .bmi-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
+  margin-top: 20px;
 }
 
 .bmi-container input {
-  width: 250px;
   padding: 10px;
+  border-radius: 6px;
   border: none;
-  border-radius: 5px;
-  outline: none;
+  width: 250px;
 }
 
 .bmi-container button {
-  background-color: #ff4500;
-  border: none;
   padding: 10px 20px;
+  border: none;
   border-radius: 6px;
-  color: white;
+  background: #ff4500;
+  color: #fff;
   cursor: pointer;
-  transition: background 0.3s;
 }
 
 .bmi-container button:hover {
-  background-color: #ff6600;
+  background: #ff6600;
 }
 
 #bmi-result {
   margin-top: 10px;
+  color: #00ff90;
   font-size: 1rem;
-  color: #fff;
 }
 
-
-.contact {
-  background-color: #1b1b1b;
-}
 
 .contact form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
+  margin-top: 15px;
 }
 
 .contact input, .contact textarea {
-  width: 300px;
+  width: 280px;
   padding: 10px;
+  border-radius: 6px;
   border: none;
-  border-radius: 5px;
-  outline: none;
 }
 
 .contact button {
-  background-color: #ff4500;
-  border: none;
   padding: 10px 25px;
   border-radius: 6px;
-  color: white;
+  background: #ff4500;
+  border: none;
+  color: #fff;
   cursor: pointer;
-  transition: background 0.3s;
 }
 
 .contact button:hover {
-  background-color: #ff6600;
+  background: #ff6600;
 }
 
 #form-msg {
@@ -287,31 +284,27 @@ nav ul li a:hover {
 }
 
 
-footer {
-  background: linear-gradient(135deg, #111 0%, #1f1f1f 50%, #111 100%);
-  text-align: center;
-  padding: 40px 20px;
-  color: #ddd;
-  font-size: 0.95rem;
-  position: relative;
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
 }
 
-footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 2px;
-  background: linear-gradient(to right, transparent, #ff4500, transparent);
+.footer-contact p {
+  color: #ff4500;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 footer .social-icons {
-  margin-top: 15px;
   display: flex;
   justify-content: center;
   gap: 20px;
+  margin-bottom: 15px;
 }
 
 footer .social-icons a {
@@ -322,13 +315,8 @@ footer .social-icons a {
 
 footer .social-icons a:hover {
   color: #ff6600;
-  text-shadow: 0 0 10px #ff4500;
 }
 
-footer p {
-  margin-top: 20px;
-  color: #aaa;
-}
 
 @keyframes fadeIn {
   from {opacity: 0; transform: translateY(30px);}
