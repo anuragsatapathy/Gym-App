@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Magneto Ultimate</title>
+  <title>Magneto Ultimate Gym</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -23,94 +23,103 @@
     </nav>
   </header>
 
-  <section class="hero" id="home">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Transform Your Body, Transform Your Life</h1>
-      <p>Join IronFlex Gym and start your fitness journey today with expert trainers and top-class equipment.</p>
-      <a href="#plans" class="btn">Explore</a>
-    </div>
-  </section>
-
-  <section class="about" id="about">
-    <h2>About Us</h2>
-    <p>At Magneto Ultimate, we believe fitness is a lifestyle. Whether you want to build muscle, gain endurance, or just stay active — our certified trainers and modern facilities are here to help you reach your goals.</p>
-  </section>
-
-  <section class="plans" id="plans">
-    <h2>Our Membership Plans</h2>
-    <div class="plan-container">
-      <div class="plan-card">
-        <h3>Basic Plan</h3>
-        <p class="price">₹799 / month</p>
-        <ul>
-          <li><i class="fa-solid fa-check"></i> Gym Access (6am - 9pm)</li>
-          <li><i class="fa-solid fa-check"></i> Locker Facility</li>
-          <li><i class="fa-solid fa-xmark"></i> Personal Trainer</li>
-        </ul>
-        <button>Join Now</button>
+  <main>
+    <section class="hero" id="home">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <h1 class="fade-in">Transform Your Body, Transform Your Life</h1>
+        <p class="fade-in">Join Magneto Ultimate and take your fitness journey to the next level with world-class trainers and facilities.</p>
+        <a href="#plans" class="btn fade-in">Explore</a>
       </div>
+    </section>
 
-      <div class="plan-card popular">
-        <h3>Standard Plan</h3>
-        <p class="price">₹1199 / month</p>
-        <ul>
-          <li><i class="fa-solid fa-check"></i> 24/7 Gym Access</li>
-          <li><i class="fa-solid fa-check"></i> Personal Trainer</li>
-          <li><i class="fa-solid fa-check"></i> Diet Consultation</li>
-        </ul>
-        <button>Join Now</button>
+    <section class="about" id="about">
+      <h2>About Us</h2>
+      <p>At Magneto Ultimate Gym, we combine dedication and technology to give you the ultimate training experience. From personalized workout plans to expert trainers — we help you achieve your best version.</p>
+    </section>
+
+    <section class="plans" id="plans">
+      <h2>Our Membership Plans</h2>
+      <div class="plan-container">
+        <div class="plan-card">
+          <h3>Basic Plan</h3>
+          <p class="price">₹799 / month</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Gym Access (6am - 9pm)</li>
+            <li><i class="fa-solid fa-check"></i> Locker Facility</li>
+            <li><i class="fa-solid fa-xmark"></i> Personal Trainer</li>
+          </ul>
+          <button>Join Now</button>
+        </div>
+
+        <div class="plan-card popular">
+          <h3>Standard Plan</h3>
+          <p class="price">₹1199 / month</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> 24/7 Gym Access</li>
+            <li><i class="fa-solid fa-check"></i> Personal Trainer</li>
+            <li><i class="fa-solid fa-check"></i> Diet Consultation</li>
+          </ul>
+          <button>Join Now</button>
+        </div>
+
+        <div class="plan-card">
+          <h3>Premium Plan</h3>
+          <p class="price">₹1799 / month</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> 24/7 Gym Access</li>
+            <li><i class="fa-solid fa-check"></i> Personal Trainer</li>
+            <li><i class="fa-solid fa-check"></i> Spa & Sauna</li>
+            <li><i class="fa-solid fa-check"></i> Diet Consultation</li>
+          </ul>
+          <button>Join Now</button>
+        </div>
       </div>
+    </section>
 
-      <div class="plan-card">
-        <h3>Premium Plan</h3>
-        <p class="price">₹1799 / month</p>
-        <ul>
-          <li><i class="fa-solid fa-check"></i> 24/7 Gym Access</li>
-          <li><i class="fa-solid fa-check"></i> Personal Trainer</li>
-          <li><i class="fa-solid fa-check"></i> Spa & Sauna</li>
-          <li><i class="fa-solid fa-check"></i> Diet Consultation</li>
-        </ul>
-        <button>Join Now</button>
+    <section class="bmi" id="bmi">
+      <h2>BMI Calculator</h2>
+      <div class="bmi-container">
+        <input type="number" id="weight" placeholder="Weight (kg)">
+        <input type="number" id="height" placeholder="Height (cm)">
+        <button onclick="calculateBMI()">Calculate BMI</button>
+        <p id="bmi-result"></p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="bmi" id="bmi">
-    <h2>BMI Calculator</h2>
-    <div class="bmi-container">
-      <input type="number" id="weight" placeholder="Weight (kg)">
-      <input type="number" id="height" placeholder="Height (cm)">
-      <button onclick="calculateBMI()">Calculate</button>
-      <p id="bmi-result"></p>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <p>Have a question or want to join? Fill out the form below and we’ll get in touch soon!</p>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p id="form-msg"></p>
-  </section>
+    <section class="contact" id="contact">
+      <h2>Contact Us</h2>
+      <p>Have a question or want to join? Fill out the form below or reach us at <i class="fa-solid fa-envelope"></i> <b>magnetogym@gmail.com</b></p>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="form-msg"></p>
+    </section>
+  </main>
 
   <footer>
-    <div class="social-icons">
-      <a href="#"><i class="fa-brands fa-facebook"></i></a>
-      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#"><i class="fa-brands fa-twitter"></i></a>
-      <a href="#"><i class="fa-brands fa-youtube"></i></a>
-    </div>
-    <p>© 2025 Magneto Ultimate | Stay Fit, Stay Strong 💪</p>
-  </footer>
+  <div class="footer-contact">
+    <p><i class="fa-solid fa-phone"></i> +91 7608841560</p>
+    <p><i class="fa-solid fa-envelope"></i> magnetogym@gmail.com</p>
+  </div>
+  <div class="social-icons">
+    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+  </div>
+  <p>© 2025 Magneto Ultimate Gym | Stay Fit, Stay Strong 💪</p>
+</footer>
+
 
   <script src="script.js"></script>
 </body>
 </html>
+
+
 
 
 
